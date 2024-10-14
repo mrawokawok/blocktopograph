@@ -33,9 +33,6 @@ jobs:
 
       - name: Create Debug APK
         run: ./gradlew assembleDebug
-
-      - name: Zipalign and Sign Android release
-        run: ./zipalign_sign.sh
                     
       # Publish APK
       - name: Release
