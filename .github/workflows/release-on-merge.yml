@@ -38,7 +38,7 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          tag: "${{ github.event.inputs.region }}-v${{ env.PERSEUS_VERSION }}"
+          tag: "rilis"
           name: "Release"
           artifacts: "build/*.apk"
           allowUpdates: true
