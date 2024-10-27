@@ -30,13 +30,11 @@ jobs:
         run: ./gradlew build assembleDebug
 
       - run: mv app/build/outputs/apk/debug/*.apk Blocktopograph.apk
-
-      - uses: ncipollo/release-action@v1
+      
+      - name: Release
+        uses: ncipollo/release-action@v1
         with:
-          prerelease: true
-          name: Nightly Build
-          bodyFile: release_notes.md
-          artifacts: Blocktopograph.apk
-          tag: nightly
+          tag: nigtly
+          name: "Per"
+          artifacts: "Blocktopograph.apk"
           allowUpdates: true
-          artifactErrorsFailBuild: true
